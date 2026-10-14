@@ -1,0 +1,17 @@
+# Ignore all compiled binary executables (files without extension)
+*
+!*.*
+
+# Exception: keep standard documentation / config files without extensions
+!Makefile
+!CMakeLists.txt
+!LICENSE
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore build directories & compiled objects
+*.o
+*.out
+*.exe
+*.dSYM/
