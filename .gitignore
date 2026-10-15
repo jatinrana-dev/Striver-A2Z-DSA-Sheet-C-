@@ -1,17 +1,21 @@
-# Ignore all compiled binary executables (files without extension)
-*
-!*.*
+# 1. Ignore everything inside any folder or subfolder
+/*
+!/*/
 
-# Exception: keep standard documentation / config files without extensions
-!Makefile
-!CMakeLists.txt
-!LICENSE
+# 2. Re-include all directories so Git can traverse subfolders
+!/**/
 
-# Ignore macOS system files
-.DS_Store
+# 3. Re-include source files, headers, and docs anywhere in the repo
+!*.cpp
+!*.hpp
+!*.c
+!*.h
+!*.md
+!.gitignore
 
-# Ignore build directories & compiled objects
+# 4. Explicitly ignore compiled binary/build extensions anywhere
 *.o
 *.out
 *.exe
 *.dSYM/
+.DS_Store
